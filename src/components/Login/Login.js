@@ -40,7 +40,7 @@ const Login = (props) => {
   useEffect(() => {
     const timeoutHandler = setTimeout(() => {
       setFormIsValid(
-        enteredEmail.includes('@') && enteredPassword.trim().length > 6
+        emailState.isValid && passwordState.isValid
       );
     }, 2000);
     return () => {
